@@ -14,8 +14,20 @@ next(employee_file)
 for record in employee_file:
     salary = float(record[3])
     bonus = float(record[4])+1
-    overallSalary = str(format((salary*bonus),".2f"))
-    employeesWrite.write(record[1]+","+record[2]+","+overallSalary+"\n")
+    overallSalary = str(format((salary*bonus),",.2f"))
+
+    employeesWrite.write(record[1]
+    +","
+    +record[2]
+    +","
+    +overallSalary
+    +"\n")
+
+    print("First Name: ",record[1])
+    print("Last Name: ",record[2])
+    print("Total Salary With bonus: ",(overallSalary))
+
+    input()
 
 employeesWrite.close()
 
